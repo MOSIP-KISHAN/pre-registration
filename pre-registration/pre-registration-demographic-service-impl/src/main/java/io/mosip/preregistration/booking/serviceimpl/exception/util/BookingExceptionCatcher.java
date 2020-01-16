@@ -40,7 +40,6 @@ import io.mosip.preregistration.core.exception.AppointmentCancelException;
 import io.mosip.preregistration.core.exception.AppointmentReBookException;
 import io.mosip.preregistration.core.exception.InvalidRequestParameterException;
 import io.mosip.preregistration.core.exception.NotificationException;
-import io.mosip.preregistration.core.exception.PreRegistrationException;
 import io.mosip.preregistration.core.exception.RecordFailedToDeleteException;
 import io.mosip.preregistration.core.exception.RestCallException;
 import io.mosip.preregistration.core.exception.TableNotAccessibleException;
@@ -163,10 +162,6 @@ public class BookingExceptionCatcher {
 		} else if (ex instanceof JsonProcessingException) {
 			throw new JsonException(ErrorCodes.PRG_BOOK_RCI_034.getCode(),
 					ErrorMessages.JSON_PROCESSING_EXCEPTION.getMessage(), mainResponseDTO);
-		}
-		else {
-			throw new PreRegistrationException(((PreRegistrationException) ex).getErrorCode(),
-					((PreRegistrationException) ex).getErrorText(), mainResponseDTO);
 		}
 
 	}
