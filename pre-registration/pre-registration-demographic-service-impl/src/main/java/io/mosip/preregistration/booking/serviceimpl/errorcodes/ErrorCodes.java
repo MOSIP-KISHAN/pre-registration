@@ -19,7 +19,7 @@ public enum ErrorCodes {
 	PRG_BOOK_RCI_002("PRG_BOOK_RCI_002"), // availability not thr for selected time
 	PRG_BOOK_RCI_003("PRG_BOOK_RCI_003"), // User has not been selected any time slot
 	PRG_BOOK_RCI_004("PRG_BOOK_RCI_004"), // Appointment time slot is already booked
-	PRG_BOOK_RCI_005("PRG_BOOK_RCI_005"), // Appointment booking failed
+	//PRG_BOOK_RCI_005("PRG_BOOK_RCI_005"), // Appointment booking failed
 	PRG_BOOK_RCI_006("PRG_BOOK_RCI_006"), // Pre id not found
 	PRG_BOOK_RCI_007("PRG_BOOK_RCI_007"), // reg center id not found
 	PRG_BOOK_RCI_008("PRG_BOOK_RCI_008"), // date is not selected
