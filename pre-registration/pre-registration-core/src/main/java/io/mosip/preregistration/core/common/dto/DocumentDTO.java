@@ -12,8 +12,6 @@ import lombok.Setter;
  * @author Rajath Kumar
  * @since 1.0.0
  */
-@Getter
-@Setter
 @NoArgsConstructor
 public class DocumentDTO implements Serializable {
 
@@ -24,5 +22,13 @@ public class DocumentDTO implements Serializable {
 	 * File content
 	 */
 	private byte[] document;
+	
+	public byte[] getDocument() {
+		return document !=null ? document.clone():null;
+	}
+
+	public void setDocument(byte[] document) {
+		this.document =document!=null ? document.clone():null;
+	}
 
 }
