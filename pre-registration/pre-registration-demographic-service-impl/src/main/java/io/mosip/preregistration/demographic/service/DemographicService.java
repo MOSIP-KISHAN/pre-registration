@@ -253,18 +253,7 @@ public class DemographicService implements DemographicServiceIntf {
 		return (AuthUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 	}
 
-	/*
-	 * This method is used to create the demographic data by generating the unique
-	 * PreId
-	 * 
-	 * @see
-	 * io.mosip.registration.service.RegistrationService#addPreRegistration(java.
-	 * lang.Object, java.lang.String)
-	 * 
-	 * @param demographicRequest pass demographic request
-	 * 
-	 * @return responseDTO
-	 */
+	
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -335,17 +324,7 @@ public class DemographicService implements DemographicServiceIntf {
 
 	}
 
-	/*
-	 * This method is used to update the demographic data by PreId
-	 * 
-	 * @see
-	 * io.mosip.registration.service.RegistrationService#addPreRegistration(java.
-	 * lang.Object, java.lang.String)
-	 * 
-	 * @param demographicRequest pass demographic request
-	 * 
-	 * @return responseDTO
-	 */
+	
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -485,7 +464,7 @@ public class DemographicService implements DemographicServiceIntf {
 				}
 			}
 			isRetrieveSuccess = true;
-		} catch (Exception ex) {
+		} catch (RuntimeException | JsonProcessingException | ParseException | IOException ex) {
 			log.debug("sessionId", "idType", "id", ExceptionUtils.getStackTrace(ex));
 			log.error("sessionId", "idType", "id",
 					"In getAllApplicationDetails method of pre-registration service - " + ex.getMessage());
