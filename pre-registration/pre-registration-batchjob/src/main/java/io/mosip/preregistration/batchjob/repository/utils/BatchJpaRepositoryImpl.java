@@ -2,7 +2,6 @@ package io.mosip.preregistration.batchjob.repository.utils;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -164,16 +163,16 @@ public class BatchJpaRepositoryImpl {
 	 * @param applicantDemographic
 	 * @return updated demographic details.
 	 */
-	public boolean updateApplicantDemographic(DemographicEntity applicantDemographic) {
-		return demographicRepository.save(applicantDemographic) != null;
+	public DemographicEntity updateApplicantDemographic(DemographicEntity applicantDemographic) {
+		return demographicRepository.save(applicantDemographic);
 	}
 
 	/**
 	 * @param entity
 	 * @return updated ProcessedPreRegEntity.
 	 */
-	public boolean updateProcessedList(ProcessedPreRegEntity entity) {
-		return processedPreIdRepository.save(entity) != null;
+	public ProcessedPreRegEntity updateProcessedList(ProcessedPreRegEntity entity) {
+		return processedPreIdRepository.save(entity);
 	}
 
 	/** Deleting demographic the consumed demographic data. */
@@ -436,10 +435,10 @@ public class BatchJpaRepositoryImpl {
 
 	/**
 	 * @param entity
-	 * @return boolean
+	 * @return AvailibityEntity
 	 */
-	public boolean saveAvailability(AvailibityEntity entity) {
-		return availabilityRepository.save(entity) != null;
+	public AvailibityEntity saveAvailability(AvailibityEntity entity) {
+		return availabilityRepository.save(entity);
 	}
 
 }
