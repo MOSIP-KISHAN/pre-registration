@@ -85,11 +85,11 @@ public class PreRegArchiveDTO {
 	}
 
 	public byte[] getZipBytes() {
-		return zipBytes;
+		return zipBytes!=null ? zipBytes.clone():null;
 	}
 
 	public void setZipBytes(byte[] zipBytes) {
-		this.zipBytes = zipBytes.clone() ;
+		this.zipBytes =zipBytes!=null ? zipBytes.clone():null ;
 	}
 	
 	
