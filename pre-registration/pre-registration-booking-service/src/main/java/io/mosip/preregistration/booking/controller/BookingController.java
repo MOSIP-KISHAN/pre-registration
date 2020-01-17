@@ -198,7 +198,7 @@ public class BookingController {
 	 * @param MainListRequestDTO
 	 * @return MainResponseDTO
 	 * @throws ParseException
-	 * @throws java.text.ParseException
+	 * @throws java.text.ParseException .
 	 */
 	@PreAuthorize("hasAnyRole('PRE_REGISTRATION_ADMIN','REGISTRATION_SUPERVISOR')")
 	@PutMapping(path = "/batch/appointment/{preRegistrationId}", produces = MediaType.APPLICATION_JSON_VALUE)
